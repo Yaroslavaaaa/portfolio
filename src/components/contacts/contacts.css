@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+
+@font-face {
+    font-family: meduim-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-Medium.woff2)
+}
+
+@font-face {
+    font-family: demiBold-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-DemiBold.woff2);
+}
+
+
+@font-face {
+    font-family: demiBoldItalic-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-DemiBoldItalic.woff2);
+    font-style: italic;
+}
+
+
+
+.contacts-container{
+    background-color: #000;
+    height: calc(var(--index)*7);
+}
+
+
+.header{
+    font-size: calc(var(--index)*2.2);
+    font-style: demiBold-font, sans-serif;
+    margin-left: calc(var(--index)*7);
+    margin-right: calc(var(--index)*7);
+    color: #FFA3A3;
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.contact-button{
+    background: none;
+    border: 3px solid #FFA3A3;
+    color: #fff;
+    font-size: calc(var(--index)*0.8);
+    font-style: medium-font;
+    border-radius: 50px;
+    padding: calc(var(--index)/2) calc(var(--index));
+    margin: 0 calc(var(--index)*2);
+    margin-top: calc(var(--index)*2);
+}
+
+.contact-link{
+    color: #FFA3A3;
+    text-decoration: none;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .contact{
+      display: flex;
+      flex-direction: column;
+    }  
+
+    .contacts-container{
+        height: calc(var(--index)*25);
+    }
+  }

@@ -1,0 +1,57 @@
+.language-switcher {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .select-language {
+    font-size: 16px;
+    padding: 8px 16px;
+    color: #FFF;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    /* appearance: none; убираем стандартную стрелку */
+  }
+
+  .select-language[data-open]{
+    background-color: #000;
+  }
+  
+  .select-language:focus {
+    outline: none;
+  }
+  
+  .select-language option {
+    font-size: 16px;
+  }
+  
+  .select-language::after {
+    content: '▼';
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #FFF;
+  }
+
+
+
+  .select-language[data-open] {
+    background-color: #000; 
+  }
+  
+  .select-language[data-open] option {
+    background-color: #000; 
+    color: #FFF; 
+  }
+  
+  .select-language[data-open]::after {
+    content: '▲'; 
+  }
+  
+
+
+  option{
+    background-color: #000;
+  }

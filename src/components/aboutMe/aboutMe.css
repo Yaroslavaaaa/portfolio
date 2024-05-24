@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root{
+    --index: calc(1vw + 1vh);
+}
+
+
+@font-face {
+    font-family: meduim-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-Medium.woff2)
+}
+
+@font-face {
+    font-family: demiBold-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-DemiBold.woff2);
+}
+
+
+@font-face {
+    font-family: demiBoldItalic-font;
+    src: url(../../static/fonts/TTtravels/TTTravels-DemiBoldItalic.woff2);
+    font-style: italic;
+}
+
+
+
+
+
+.about-me,
+.projects,
+.contacts {
+  margin-bottom: 2rem;
+}
+
+
+.container{
+    background-color: #000;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+.ellipse{
+    background-image: url('../../images/ellipse.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    top: 0;
+    left: 0;
+
+}
+
+.about-content{
+    background-repeat: no-repeat;
+    display: flex;
+    padding-top: calc(var(--index)*5.5);
+    border-bottom: 1px solid #FFA3A3;
+    height: 98.7vh;
+    position: relative;
+    z-index: 3;
+
+}
+
+.text{
+    color: #fff;
+    width: 50vw;
+    margin-left: calc(var(--index)*7);
+}
+
+.surname{
+    font-size: calc(var(--index)*3);
+    font-style: demiBoldItalic-font, sans-serif;
+    font-style: italic;
+}
+
+
+.description{
+    font-size: calc(var(--index));
+    font-style: medium-font;
+    margin-top: calc(var(--index)*2);
+}
+
+.name{
+    font-size: calc(var(--index)*3);
+    font-style: demiBold-font, sans-serif;
+    margin-left: calc(var(--index)*3);
+    margin-top: calc(var(--index)*-1);
+    color: #FFA3A3;
+}
+
+
+.projects-button{
+    padding: calc(var(--index)/2) calc(var(--index));
+    margin-top: calc(var(--index)*2);
+    background: none;
+    color: #FFA3A3;
+    font-size: calc(var(--index));
+    font-style: medium-font;
+    border: #FFA3A3 2px solid;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+
+.background{
+    background-image: url('../../images/background2.png');
+    height: calc(var(--index)*39.5);
+    background-repeat: no-repeat;
+    width: 60vw;
+    position: absolute;
+    top: -10vw;
+    left: 40vw;
+    z-index: 0;
+    scale: 1;
+    overflow: hidden;
+}
+
+
+.avatar{
+    width: calc(var(--index)-20);
+}
+
+.image{
+    width: 80%;
+    margin-left: calc(var(--index)*5);
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+.projects .project,
+.contacts ul {
+  margin-top: 1rem;
+}
+
+.projects .project h3,
+.contacts ul li {
+  margin-bottom: 0.5rem;
+}
+
+.projects .project a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    .about-content{
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+
+    .avatar{
+        display: flex;
+        justify-content: center;
+    }
+
+    .image{
+        width: calc(var(--index)*20);
+    }
+
+    .background, .ellipse{
+        background: none;
+    }
+    
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .projects-button{
+        margin-bottom: calc(var(--index));
+    }
+
+
+    
+  }
+
+
+
